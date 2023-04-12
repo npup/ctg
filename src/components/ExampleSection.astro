@@ -1,0 +1,55 @@
+---
+interface Props {
+    title: string;
+    anchor: string;
+}
+const { title, anchor } = Astro.props;
+---
+
+<div class="example-section">
+    <div class="heading">
+        <h1 id={anchor}>{title}</h1>
+        <a href="#top">To the top</a>
+    </div>
+    <div class="wrap">
+        <div class="description">
+            <slot name="description" />
+        </div>
+
+        <div class="example">
+            <h2>Examples</h2>
+            <slot />
+        </div>
+    </div>
+</div>
+
+<style is:inline>
+    .example-section {
+        border-bottom: 1px solid var(--color-row--hover);
+    }
+    .heading {
+        margin-right: 2rem;
+        & a {
+            font-size: 90%;
+        }
+    }
+
+    @media screen and (min-width: 481px) {
+        .heading {
+            text-align: right;
+        }
+        .example-section {
+            display: flex;
+        }
+        .wrap {
+            flex: 1;
+        }
+        .description {
+            margin-top: 1.7rem;
+        }
+        .example {
+            margin: 1.5rem 0;
+            _border-top: 1px solid var(--color-row--hover);
+        }
+    }
+</style>

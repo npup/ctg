@@ -1,0 +1,9 @@
+.history/
+.vscode/
+
+node_modules/
+dist/
+docs/
+docs-local/
+
+.astro/

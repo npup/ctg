@@ -1,0 +1,20 @@
+---
+import ExampleSection from "../../components/ExampleSection.astro";
+const { anchor } = Astro.props;
+---
+
+<ExampleSection anchor={anchor} title="Headings">
+    <div slot="description">
+        <p>
+            Four levels of headings are supported, <code>&lt;h1></code>, <code
+                >&lt;h2></code
+            >, <code>&lt;h3></code> and <code>&lt;h4></code>. I pity you if you
+            would need (or would use) higher than that!
+        </p>
+    </div>
+
+    <h1>Heading &lt;h1></h1>
+    <h2>Heading &lt;h2></h2>
+    <h3>Heading &lt;h3></h3>
+    <h4>Heading &lt;h4></h4>
+</ExampleSection>

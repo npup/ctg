@@ -1,0 +1,37 @@
+---
+import ExampleSection from "../../components/ExampleSection.astro";
+const { anchor } = Astro.props;
+---
+
+<ExampleSection anchor={anchor} title="Paragraphs">
+    <div slot="description">
+        <p>
+            Paragraphs, <code>&lt;p></code>, are styled with
+        </p>
+        <ul>
+            <li>
+                a <code>max-width</code>, which will only have effect in quite
+                wide viewports
+            </li>
+            <li>some line spacing (means CSS <code>line-height</code>)</li>
+            <li>just an ounce of <code>right-padding</code></li>
+        </ul>
+        &mdash; all for readability.
+    </div>
+
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quae
+        reprehenderit, sequi laborum ullam optio quas in consequuntur iste dolor
+        dignissimos, reiciendis error possimus! In quisquam distinctio
+        blanditiis perspiciatis molestiae?
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro modi
+        nulla dolores quod? Nesciunt facilis placeat, dignissimos numquam
+        aperiam eum perferendis sed? Praesentium molestiae dolorum facilis
+        harum, fugit id beatae. Ducimus consequuntur at, quisquam animi quia ex
+        earum? Atque iure accusantium voluptas! Aliquid, voluptatibus accusamus
+        perferendis sequi vitae repellat similique eum dicta!
+    </p>
+</ExampleSection>

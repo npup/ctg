@@ -1,0 +1,54 @@
+{
+    "name": "css-to-go2",
+    "type": "module",
+    "version": "1.0.0",
+    "description": "A bit of global CSS to help shape up the looks of a plain HTML document.  Has a dark mode and a light mode.",
+    "author": "P.Envall <petter.envall@gmail.com>",
+    "homepage": "https://npup.github.io/css-to-go",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npup/css-to-go"
+    },
+    "keywords": [
+        "css",
+        "to go",
+        "simple",
+        "bare bones",
+        "global"
+    ],
+    "main": "dist/css-to-go.min.css",
+    "files": [
+        "dist/*.css"
+    ],
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/npup/css-to-go/issues"
+    },
+    "dependencies": {
+        "@commitlint/cli": "^17.5.1",
+        "@commitlint/config-conventional": "^17.4.4",
+        "@semantic-release/changelog": "^6.0.3",
+        "@semantic-release/git": "^10.0.1",
+        "astro": "^2.2.3",
+        "filehound": "^1.17.6",
+        "husky": "^8.0.3",
+        "postcss": "^8.4.21",
+        "postcss-nesting": "^11.2.2",
+        "prettier": "^2.8.7"
+    },
+    "config": {
+        "basePath": "/css-to-go"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "astro build",
+        "build:local": "NODE_ENV=local astro build",
+        "clean": "rm -rf dist docs && mkdir dist",
+        "prebuild": "npm run clean",
+        "start": "astro dev",
+        "postbuild": "npm run copy:dist && npm run process:docs && npm run touch-nojekyll && echo '----- Done'",
+        "copy:dist": "cat docs/_astro/*.css > dist/css-to-go.min.css && npx prettier dist/css-to-go.min.css > dist/css-to-go.css",
+        "process:docs": "node scripts/updateBasePath.js $npm_package_config_basePath",
+        "touch-nojekyll": "touch docs/.nojekyll"
+    }
+}

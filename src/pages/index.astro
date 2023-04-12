@@ -1,0 +1,131 @@
+---
+import Layout from "@/layouts/main.astro";
+---
+
+<Layout>
+    <h1>CSS To Go</h1>
+
+    <p>
+        <b>Whoa! This looks quite <em>unstyled</em>... But read on!</b>
+    </p>
+
+    <p>
+        (This is the overview page. Also look at the examples of <a
+            href="/examples">the standard theme</a
+        > and <a href="/examples/theme-light">the light theme</a>).
+    </p>
+
+    <h2>What is it?</h2>
+
+    <p>
+        Sometimes, I write a bit of plain HTML and then start giving it some
+        minimal styling. Recently, I've been thinking more and more like this:
+    </p>
+
+    <blockquote>
+        <p>
+            If only there was a small<sup>*</sup>
+            <code>CSS</code> file that I could drop into the project just to get
+            it over with instead!
+            <div style="margin-top: 1em; text-align: right;">
+                <sup>*) For some value of "small"</sup>
+            </div>
+        </p>
+    </blockquote>
+
+    <p>
+        &mdash; so I created <a href="https://github.com/npup/css-to-go"
+            >CSS To Go</a
+        >.
+    </p>
+
+    <h2>What does it look like?</h2>
+
+    <div class="ctg-form-controls--col">
+        <label>
+            <input
+                type="checkbox"
+                onclick="document.body.classList.toggle('ctg-root')"
+            />
+            Check this box to see what <em>CSS To Go</em> looks like
+        </label>
+
+        <label>
+            <input
+                type="checkbox"
+                onclick="document.body.classList.toggle('ctg-theme--light')"
+            />
+            Toggle theme (standard vs. light mode)
+        </label>
+    </div>
+
+    <h2>What does it do?</h2>
+
+    <p>Basically, it does:</p>
+
+    <ol>
+        <li>apply some styling on bare elements</li>
+        <li>make available a small number of utility classes</li>
+    </ol>
+
+    <p>
+        All in all, it is a quite small (under 2 kB, minified and gzipped) set
+        of global <code>CSS</code> that is easy to apply to most any site.
+    </p>
+
+    <h3>How to use it</h3>
+
+    <p>
+        To enable <em>CSS To Go</em>, wrap your content with the CSS class <code
+            >ctg-root</code
+        > (putting it all the way up on the <code>&lt;body&gt;</code> tag works just
+        fine).
+    </p>
+
+    <code>
+        <pre>        
+    &lt;DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;title>Example&lt;/title&gt;
+        &lt;link rel="stylesheet" href="/path/to/css-to-go.css" /&gt;
+    &lt;/head&gt;
+    &lt;body class="ctg-root ctg-container ctg-theme--light"&gt;
+
+        ... your content
+
+    &lt;/body&gt;
+    &lt;html&gt;
+        </pre>
+    </code>
+
+    <p>
+        That's it! To switch theme, toggle the <code>ctg-theme--light</code> class,
+        which also applies to all that it is wrapping. The <code
+            >ctg-container</code
+        > class is a totally optional (and typical) content wrapper class &mdash;
+        read more about in the <a
+            href="/examples#example-utility-classes--container">examples</a
+        >.
+    </p>
+
+    <h3>Element styling</h3>
+
+    <p>
+        Most of its business is applying <code>CSS</code> to <em>tag names</em>,
+        so that no manual styling at all need be applied. Such an effect can be
+        seen on this very page, should you switch the theme on.
+    </p>
+
+    <h3>Utility classes</h3>
+
+    <p>
+        There are also a small number of utility classes, to help on those
+        occasions that you just got to have that little something that you
+        "always need", but for which do not fancy bringing in all of <a
+            href="https://tailwindcss.com/">Tailwind CSS</a
+        >] or something similar. Read more about this in the <a
+            href="/examples#example-utility-classes">examples</a
+        >, utility classes section.
+    </p>
+</Layout>

@@ -1,0 +1,145 @@
+---
+import ExampleSection from "../../components/ExampleSection.astro";
+const { anchor } = Astro.props;
+---
+
+<ExampleSection anchor={anchor} title="Utility classes">
+    <div slot="description">
+        <p>
+            There is a small number of <em>utility classes</em>, which are there
+            to help when it may be not enough to simply include the CSS and let
+            the global styles apply to bare HTML elements &mdash; which really
+            is the primary goal for the idea of <em>CSS To Go</em>.
+        </p>
+
+        <h2>Types of utility classes</h2>
+        <p>
+            There are <em>container</em>-, <em>note</em>-, <em>signal</em>-, and <em
+                >formatter</em
+            > classes.
+        </p>
+
+        <h3 id="example-utility-classes--container">Container</h3>
+        <p>
+            &mdash; is generally meant to be used as a wrapper for the whole
+            content &mdash; though it could be used for just chunks, too.<br />
+            Apart from some padding, it also gets (auto-) <code>margin</code> and
+            <code>max-width</code> when the viewport gets a bit large. Typical page-wrapping
+            behaviour.
+        </p>
+
+        <p>
+            Personally, I like to put it on the <code>&lt;body></code> tag, together
+            with the style-enabling class, <code>ctg-root</code>.
+        </p>
+
+        <h3 id="example-utility-classes--note">Note</h3>
+        <p>
+            Utility classes that create something that looks notification-like.<br
+            />
+            They come in four flavours: <code>ctg-note</code>, <code
+                >ctg-note--info</code
+            >,
+            <code>ctg-note--warn</code> and <code>ctg-note--error</code>.
+        </p>
+
+        <h3 id="example-utility-classes--signal">Signal</h3>
+        <p>
+            Quick way to turn something into a <em>"yes"</em>, <em>"no"</em>, or <em
+                >"watch out"</em
+            > thing. These are the currently available signals:
+        </p>
+        <ul>
+            <li><code>ctg-signal--yes</code></li>
+            <li><code>ctg-signal--no</code></li>
+            <li><code>ctg-signal--warn</code></li>
+        </ul>
+        See below for examples.
+
+        <h3 id="example-utility-classes--formatter">Formatter</h3>
+        <p>Those currently available are</p>
+        <ul>
+            <li><code>ctg-format--date</code></li>
+            <li><code>ctg-format--numerical</code></li>
+        </ul>
+
+        <p>
+            They both just apply a monospace font style to its content. Pretty
+            lame, maybe they will be removed.
+        </p>
+    </div>
+
+    <h3>Container</h3>
+
+    <p>Outlines applied for illustrative purposes.</p>
+    <div class="ctg-container">
+        <div style="outline: 1px dashed red;">
+            This is a <code>div</code> with <em>no</em> container class applied.
+        </div>
+        <br />
+        <div class="ctg-container" style="outline: 1px dashed red;">
+            This is a <code>div</code> that
+            <em>has</em>&nbsp;<code>class="ctg-container"</code> on it
+        </div>
+    </div>
+
+    <h3>Notes</h3>
+
+    <div class="ctg-container">
+        {
+            [
+                "ctg-note",
+                "ctg-note--info",
+                "ctg-note--warn",
+                "ctg-note--error",
+            ].map((c) => (
+                <p class={c}>
+                    Using <code>class="{c}"</code>
+                </p>
+            ))
+        }
+    </div>
+
+    <h3>Signal</h3>
+    <div class="ctg-container">
+        <p>
+            Below is an example where some plain buttons are turned into having
+            "signals".
+        </p>
+        <label>
+            <div>
+                <code>ctg-signal--yes</code>
+            </div>
+            <button type="button" class="ctg-signal--yes">Yes</button>
+        </label>
+        <label>
+            <div>
+                <code>ctg-signal--no</code>
+            </div>
+            <button type="button" class="ctg-signal--no">No</button>
+        </label>
+        <label>
+            <div>
+                <code>ctg-signal--warn</code>
+            </div>
+            <button type="button" class="ctg-signal--warn">Be careful</button>
+        </label>
+    </div>
+
+    <h3>Formatters</h3>
+    <div class="ctg-container">
+        <h4>ctg-format--date</h4>
+        <p>
+            <span class="ctg-format--date">2021-06-15</span> vs. <span
+                >2021-06-15</span
+            > (unformatted).
+        </p>
+
+        <h4>ctg-format--numerical</h4>
+        <p>
+            <span class="ctg-format--numerical">12 768</span> vs. <span
+                >12 768</span
+            > (unformatted).
+        </p>
+    </div>
+</ExampleSection>

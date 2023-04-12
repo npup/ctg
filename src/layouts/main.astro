@@ -1,0 +1,22 @@
+---
+interface Props {
+    useCTG?: boolean;
+    theme?: "dark" | "light";
+}
+const { useCTG = false, theme = "dark" } = Astro.props;
+import "../styles/main.css";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS To Go - Example pages</title>
+    </head>
+    <body
+        class={`${useCTG ? "ctg-root" : ""} ctg-container ctg-theme--${theme}`}
+    >
+        <slot />
+    </body>
+</html>

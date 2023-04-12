@@ -1,0 +1,131 @@
+---
+import ExampleSection from "../../components/ExampleSection.astro";
+const { anchor } = Astro.props;
+---
+
+<ExampleSection title="Form controls" anchor={anchor}>
+    <div slot="description">
+        <p>
+            There is support for some of the most commonly used form controls,
+            such as
+        </p>
+        <ul>
+            <li>Text inputs &mdash; <code>&lt;input type="text"></code></li>
+            <li>Range inputs &mdash; <code>&lt;input type="range"></code></li>
+            <li>Text fields &mdash; <code>&lt;textarea></code></li>
+            <li>Checkboxes &mdash; <code>&lt;input type="checkbox"></code></li>
+            <li>Radio buttons &mdash; <code>&lt;input type="radio"></code></li>
+            <li>Selects &mdash; <code>&lt;select></code></li>
+            <li>
+                Buttons &mdash; <code>&lt;button type="button|submit"></code> and
+                <code>&lt;input type="submit"></code>
+            </li>
+        </ul>
+
+        <p>
+            They are supposed to be wrapped in a <code>&lt;label></code> element,
+            like this:
+        </p>
+        <code
+            ><pre>
+    &lt;label>
+        User name
+        &lt;input type="text">
+    &lt;/label></pre>
+        </code>
+        <p>This gives the effect seen in the examples below.</p>
+    </div>
+
+    <h3>Text input</h3>
+    <div class="ctg-container">
+        <label>
+            User name
+            <input type="text" />
+        </label>
+    </div>
+
+    <h3>Range input</h3>
+    <div class="ctg-container">
+        <label>
+            Salary
+            <input type="range" min="0" max="10000" step="1000" />
+        </label>
+    </div>
+
+    <h3>Text area</h3>
+    <div class="ctg-container">
+        <label>
+            Story of my life
+            <textarea rows="4" cols="30"></textarea>
+        </label>
+    </div>
+
+    <h3>Checkboxes and radio buttons</h3>
+    <h4>Checkboxes</h4>
+    <div class="ctg-container">
+        <label>
+            <input type="checkbox" value="C" />
+            Cannonball Adderley
+        </label>
+        <label>
+            <input type="checkbox" value="T" />
+            Trane
+        </label>
+        <label>
+            <input type="checkbox" value="G" />
+            George Garzone
+        </label>
+    </div>
+
+    <h4>Radio buttons</h4>
+    <div class="ctg-container">
+        <label>
+            <input type="radio" name="saxophonist-radio" value="C" />
+            Cannonball Adderley
+        </label>
+        <label>
+            <input type="radio" name="saxophonist-radio" value="T" />
+            Trane
+        </label>
+        <label>
+            <input type="radio" name="saxophonist-radio" value="G" />
+            George Garzone
+        </label>
+    </div>
+
+    <h4>Select</h4>
+    <div class="ctg-container">
+        <label>
+            Saxophonist
+            <select>
+                <option value="C">Cannonball Adderley</option>
+                <option value="T">Trane</option>
+                <option value="G">George Garzone</option>
+            </select>
+        </label>
+    </div>
+
+    <h4>Buttons</h4>
+    <div class="ctg-container">
+        <label>
+            <div>
+                <code>&lt;button type="button"></code><br />
+            </div>
+            <button type="button">No pressure</button>
+        </label>
+
+        <label>
+            <div>
+                <code>&lt;button type="submit"></code><br />
+            </div>
+            <button type="submit">No pressure</button>
+        </label>
+
+        <label>
+            <div>
+                <code>&lt;input type="submit"></code><br />
+            </div>
+            <input type="submit" value="Submit" />
+        </label>
+    </div>
+</ExampleSection>

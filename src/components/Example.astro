@@ -1,0 +1,16 @@
+---
+interface Props {
+    lightMode?: boolean;
+}
+const { lightMode = false } = Astro.props;
+---
+
+<style is:inline>
+    .example {
+        border-left: 2px dashed #ccc;
+        padding: 1rem 0 1rem 1rem;
+    }
+</style>
+<article class="example">
+    <slot />
+</article>

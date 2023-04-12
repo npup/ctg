@@ -1,0 +1,26 @@
+---
+import ExampleSection from "../../components/ExampleSection.astro";
+const { anchor } = Astro.props;
+---
+
+<ExampleSection anchor={anchor} title="Hyperlinks">
+    <div slot="description">
+        <p>
+            Links have little extra to them, but for some <code
+                >text-decoration</code
+            >
+            and a hover/focus style.
+        </p>
+    </div>
+
+    <p>
+        Do you want to visit one of the world's <a href="https://example.com/"
+            >most popular web pages</a
+        >? Just go ahead!<br />
+        Here is <a href="https://example.com/">another one</a>, albeit a bit
+        less popular. There is currently no difference in appearance between <a
+            href="https://example.com/">external links</a
+        >
+        and <a href="/">relative links</a>, but that might change in the future.
+    </p>
+</ExampleSection>

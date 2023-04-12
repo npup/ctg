@@ -1,0 +1,12 @@
+.ctg-form-controls--row label {
+  cursor: pointer;
+  flex: 0 1 auto;
+  margin-right: var(--marginright-label--form-controls-row);
+  padding: var(--padding-label--form-controls-row);
+}
+
+.ctg-form-controls--col label {
+  margin-left: var(--marginleft-label--form-controls-col);
+  margin-bottom: var(--marginbottom-label--form-controls-col);
+  padding-bottom: var(--paddingbottom-label--form-controls-col);
+}

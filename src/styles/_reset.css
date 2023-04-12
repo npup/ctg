@@ -1,0 +1,21 @@
+.ctg-root,
+.ctg-root * {
+    box-sizing: border-box;
+}
+
+.ctg-root {
+    margin: 0;
+
+    & h1,
+    & h2,
+    & h3,
+    & h4 {
+        margin: var(--margin--headings);
+    }
+
+    & ul,
+    & ol {
+        margin: 0.8em 0;
+        padding: 0 0 0 1rem;
+    }
+}

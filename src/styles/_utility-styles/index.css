@@ -1,0 +1,76 @@
+@import "./_styles.css";
+
+/** container */
+.ctg-root.ctg-container,
+.ctg-root .ctg-container {
+    padding: var(--padding-container);
+    margin: var(--margin-container);
+    max-width: var(--maxwidth-container);
+}
+.ctg-root {
+    /** forms */
+    .ctg-form-controls--row {
+        display: flex;
+    }
+    .ctg-form-controls--col {
+        padding-bottom: var(--paddingbottom--form-controls-col);
+    }
+
+    /** formatters */
+    .ctg-format--date {
+        font-family: var(--font-formatted-date);
+    }
+    .ctg-format--numerical {
+        font-family: var(--font-formatted-numerical);
+    }
+
+    /** signals */
+    .ctg-signal--yes.ctg-signal--yes {
+        background-color: var(--color-general--yes);
+        color: var(--color-WHITE2);
+    }
+
+    .ctg-signal--no.ctg-signal--no {
+        background-color: var(--color-general--no);
+        color: var(--color-WHITE2);
+    }
+
+    .ctg-signal--warn.ctg-signal--warn {
+        background-color: var(--color-general--warn);
+        color: var(--color-WHITE2);
+    }
+
+    /** TODO: use some kind of "extends" for the note base styles */
+    .ctg-note {
+        color: var(--color-note);
+        border-left: 0.5rem solid var(--color-LIGHT_BLUE);
+        padding: 0.2rem 0 0.2rem 0.5rem;
+        background-color: var(--bgcolor-note);
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+    .ctg-note--info {
+        color: var(--color-note);
+        border-left: 0.5rem solid var(--color-LIGHT_BLUE);
+        padding: 0.2rem 0 0.2rem 0.5rem;
+        background-color: var(--bgcolor-note);
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        border-left-color: var(--color-LIGHT_GREEN);
+    }
+
+    .ctg-note--warn {
+        color: var(--color-note);
+        border-left: 0.5rem solid var(--color-LIGHT_BLUE);
+        padding: 0.2rem 0 0.2rem 0.5rem;
+        background-color: var(--bgcolor-note);
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        border-left-color: var(--color-general--warn);
+    }
+    .ctg-note--error {
+        color: var(--color-note);
+        border-left: 0.5rem solid var(--color-LIGHT_BLUE);
+        padding: 0.2rem 0 0.2rem 0.5rem;
+        background-color: var(--bgcolor-note);
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        border-left-color: var(--color-general--no);
+    }
+}

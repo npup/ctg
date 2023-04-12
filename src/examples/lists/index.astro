@@ -1,0 +1,31 @@
+---
+import ExampleSection from "../../components/ExampleSection.astro";
+const { anchor } = Astro.props;
+---
+
+<ExampleSection anchor={anchor} title="Lists">
+    <div slot="description">
+        <p>
+            Ordered and unordered lists are supported. Both lists keep their <code
+                >list-style-type</code
+            >, with some styling applied to their numbers and bullets,
+            respectively. There is also a hover effect for the list items.
+        </p>
+    </div>
+
+    <div>
+        <h3>Ordered list</h3>
+        <ol>
+            <li>Cannonball Adderley</li>
+            <li>Trane</li>
+            <li>George Garzone</li>
+        </ol>
+
+        <h3>Unordered list</h3>
+        <ul>
+            <li>Cannonball Adderley</li>
+            <li>Trane</li>
+            <li>George Garzone</li>
+        </ul>
+    </div>
+</ExampleSection>

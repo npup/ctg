@@ -1,0 +1,149 @@
+.ctg-root {
+    /** base colors */
+
+    --color-GREEN: #171;
+    --color-LIGHT_GREEN: #8f8;
+    --color-RED: #c44;
+    --color-ORANGE: #fa2;
+    --color-BLUE: #16e;
+    --color-LIGHT_BLUE: #5df;
+    --color-WHITE: #fdfdfd;
+    --color-WHITE2: #eeffff;
+    --color-GRAY_LIGHT: #dee;
+    --color-GRAY: #cdd;
+    --color-GRAY2: #9aa;
+    --color-BLACK: #222222;
+    --color-DARK_BLUE: #046;
+}
+
+.ctg-root {
+    /** colors */
+    --color-background-main: var(--color-BLACK);
+    --color-text-main: var(--color-WHITE2);
+    --color-link: var(--color-WHITE);
+    --color-link--hover: var(--color-LIGHT_BLUE);
+    --color-link--active: var(--color-LIGHT_BLUE);
+    --color-headings: var(--color-LIGHT_BLUE);
+
+    --color-codepre-border: var(--color-DARK_BLUE);
+
+    --color-table-head: var(--color-LIGHT_BLUE);
+
+    --color-row--hover: var(--color-DARK_BLUE);
+
+    --color-general--yes: var(--color-GREEN);
+    --color-general--no: var(--color-RED);
+    --color-general--warn: var(--color-ORANGE);
+
+    --color-list-marker: var(--color-LIGHT_BLUE);
+
+    --color-em: var(--color-LIGHT_BLUE);
+    --color-code: var(--color-ORANGE);
+    --color-hr: var(--color-DARK_BLUE);
+    --outlinecolor-form-control--focus: var(--color-BLUE);
+
+    --bgcolor-blockquote: var(--color-DARK_BLUE);
+    --bordercolor-blockquote: var(--color-GRAY_LIGHT);
+
+    --color-note: var(--color-text-main);
+    --bgcolor-note: var(--color-row--hover);
+
+    /** fonts */
+    --font-main: Lato, Avenir, Sans serif;
+    --font-formatted-numerical: Courier, Monospace, Sans serif;
+    --font-formatted-date: Courier, Monospace, Sans serif;
+
+    /** transitions */
+    --transition--color: color 0.125s ease-in;
+    --transition--bgcolor: background-color 0.125s ease-in;
+    --button-boxshadow-transition: box-shadow 0.125s ease-in;
+
+    /** transforms */
+    --transform--checkbox: scale(1.4);
+    --transform--radio: scale(1.4);
+
+    /** border radius */
+    --border-radius: 4px;
+
+    /** measurements */
+    --line-height-copy: 1.5;
+    --input-text-padding: 0.2rem;
+    --textarea-padding: 0.3rem;
+
+    --margin-list-item: 0 0 0.2rem 1rem;
+    --padding-list-item: 0.2rem 0.4rem 0.2rem 0.4rem;
+
+    --margin-label: 0.5rem 0 0.8rem;
+    --padding-label: 0 0 0.5rem;
+
+    --margintop--input-text: 0.2rem;
+    --margintop--textarea: 0.2rem;
+
+    --marginright--checkbox: 0.3rem;
+    --marginright--radio: 0.3rem;
+
+    --margintop--select: 0.2rem;
+    --padding--select: 0.2rem;
+
+    --margin-button: 0.1rem 0.2rem;
+    --padding-button: 0.4rem 0.8rem;
+
+    --padding-container: 0.3rem 1rem;
+
+    --button-boxshadow-shape: 0px 0px 2px 2px;
+    --button-boxshadow--off: var(--button-boxshadow-shape) transparent;
+    --button-boxshadow--on: var(--button-boxshadow-shape) var(--color-WHITE);
+
+    --marginright-label--form-controls-row: 1rem;
+    --padding-label--form-controls-row: 0 0.5rem 0 0;
+
+    --marginleft-label--form-controls-col: 0.5rem;
+    --marginbottom-label--form-controls-col: 0;
+    --paddingbottom-label--form-controls-col: 0;
+
+    --paddingbottom--form-controls-col: 1rem;
+
+    --margin--headings: 0.8rem 0;
+
+    --max-width--copy: 50rem;
+    --padding-right--copy: 0.5rem;
+}
+
+.ctg-root.ctg-theme--light,
+.ctg-root .ctg-theme--light {
+    --color-background-main: var(--color-WHITE2);
+    --color-text-main: var(--color-BLACK);
+    --color-link: var(--color-BLACK);
+    --color-link--hover: var(--color-BLUE);
+    --color-link--active: var(--color-BLUE);
+
+    --color-em: var(--color-BLACK);
+    --color-code: var(--color-DARK_BLUE);
+    --outlinecolor-form-control--focus: var(--color-BLUE);
+
+    --bgcolor-blockquote: var(--color-GRAY);
+    --bordercolor-blockquote: var(--color-DARK_BLUE);
+    --color-list-marker: var(--color-DARK_BLUE);
+
+    --color-row--hover: var(--color-GRAY_LIGHT);
+
+    --color-headings: var(--color-DARK_BLUE);
+
+    --color-note: var(--color-text-main);
+    --bgcolor-note: var(--color-row--hover);
+
+    --button-boxshadow--on: var(--button-boxshadow-shape) var(--color-BLUE); /*var(--button-boxshadow-shape) var(--color-BLACK);*/
+}
+
+@media screen and (min-width: 481px) {
+    .ctg-root {
+        --padding-container: 0.6rem 2rem;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .ctg-root {
+        --margin-container: 0 auto;
+        --maxwidth-container: 1024px;
+    }
+}

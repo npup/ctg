@@ -1,0 +1,25 @@
+---
+import ExampleSection from "../../components/ExampleSection.astro";
+const { anchor } = Astro.props;
+---
+
+<ExampleSection anchor="{anchor}" title="Sectioning">
+    <div slot="description">
+        <p>
+            For sectioning purposes, the <code>&lt;hr></code> element can be used,
+            and is given some styling.
+        </p>
+    </div>
+
+    <div>
+        <p>
+            Lorem ipsum text that goes on for a while.<br />
+            Talking about the fascinating amet consectetur adipisicing elit. And
+            such. Not to mention dolorem aspernatur illo officia, sunt deleniti &mdash;
+            officia obcaecati, harum veritatis assumenda quae nesciunt ab delectus
+            aliquid at, just until a wild <code>&lt;hr></code> appears.
+        </p>
+        <hr />
+        <p>Then follows some other text, equally fascinating.</p>
+    </div>
+</ExampleSection>

@@ -1,0 +1,35 @@
+---
+import ExampleSection from "../../components/ExampleSection.astro";
+const { anchor } = Astro.props;
+---
+
+<ExampleSection anchor={anchor} title="Quotes and emphasis">
+    <div slot="description">
+        <p>Currently, these quote- and emphasis elements are supported:</p>
+        <ul>
+            <li><code>&lt;code></code></li>
+            <li><code>&lt;em></code></li>
+            <li><code>&lt;blockquote></code></li>
+        </ul>
+    </div>
+
+    <h3>&lt;code></h3>
+    <p>
+        This is a sentence that mentions something and denotes it as code:<br
+        /><code>10 PRINT "HELLO"; GOTO 10;</code> &mdash; hopefully because it is.
+    </p>
+
+    <h3>&lt;em></h3>
+    <p>
+        Some words in this sentence <em>really begged</em> to be <em
+            >emphasized</em
+        >!
+    </p>
+
+    <h3>&lt;blockquote></h3>
+    <div>
+        <blockquote cite="https://example.com/theory">
+            In theory, there is no difference between practice and theory.
+        </blockquote>
+    </div>
+</ExampleSection>

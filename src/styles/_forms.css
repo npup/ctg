@@ -1,0 +1,94 @@
+.ctg-root {
+    & label {
+        cursor: pointer;
+        display: block;
+        margin: var(--margin-label);
+        padding: var(--padding-label);
+
+        & > input[type="text"] {
+            display: block;
+            margin-top: var(--margintop--input-text);
+            padding: var(--input-text-padding);
+        }
+
+        & > input[type="password"] {
+            display: block;
+            margin-top: var(--margintop--input-text);
+            padding: var(--input-text-padding);
+        }
+
+        & > input[type="range"] {
+            display: block;
+            margin-top: var(--margintop--input-text);
+            padding: var(--input-text-padding);
+        }
+
+        & > textarea {
+            display: block;
+            margin-top: var(--margintop--textarea);
+            padding: var(--textarea-padding);
+            border-radius: var(--border-radius);
+        }
+
+        & > input[type="checkbox"] {
+            margin-right: var(--marginright--checkbox);
+            transform: var(--transform--checkbox);
+        }
+
+        & > input[type="radio"] {
+            margin-right: var(--marginright--radio);
+            transform: var(--transform--radio);
+        }
+
+        & > select {
+            display: block;
+            margin-top: var(--margintop--select);
+            padding: var(--padding--select);
+            border-radius: var(--border-radius);
+        }
+    }
+
+    & input[type="submit"],
+    & button[type="button"],
+    & button[type="submit"] {
+        border: 0;
+        margin: var(--margin-button);
+        padding: var(--padding-button);
+        background-color: var(--color-BLUE);
+        color: var(--color-WHITE2);
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        box-shadow: var(--button-boxshadow--off);
+        transition: var(--button-boxshadow-transition);
+
+        outline-offset: 2px;
+
+        &:hover {
+            outline: -webkit-focus-ring-color auto 2px;
+        }
+    }
+
+    /** focus outline */
+    /*
+    @mixin form-control-focus {
+        &:focus-visible {
+            outline-color: var(--outlinecolor-form-control--focus);
+        }
+    }
+*/
+
+    & label {
+        & > input[type="text"],
+        & > textarea,
+        & > input[type="checkbox"],
+        & > input[type="radio"],
+        & > select {
+            @include form-control-focus;
+        }
+    }
+    /*   input[type="submit"],
+     button[type="button"],
+     button[type="submit"] {
+     }
+  */
+}
