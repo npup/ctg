@@ -13,7 +13,7 @@ const conf = {
     },
     prod: {
         outDir: "docs",
-        site: "https://npup.github.io/ctx",
+        site: "https://npup.github.ix/ctx",
         //base: "/ctg",
         base: "/",
     },
