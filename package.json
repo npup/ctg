@@ -1,7 +1,7 @@
 {
-    "name": "ctg",
+    "name": "@npup/ctg",
     "type": "module",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A bit of global CSS to help shape up the looks of a plain HTML document.  Has a dark mode and a light mode.",
     "author": "P.Envall <petter.envall@gmail.com>",
     "homepage": "https://npup.github.io/ctg",
