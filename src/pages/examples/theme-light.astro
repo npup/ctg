@@ -1,10 +1,11 @@
 ---
 import Layout from "@/layouts/main.astro";
 import ExampleContent from "@/components/ExampleContent.astro";
+import { siteUrl } from "@/util";
 ---
 
 <Layout useCTG={true} theme="light">
     <ExampleContent>
-        Try <a href="/examples">dark mode</a>.
+        Try <a href={siteUrl("examples")}>dark mode</a>.
     </ExampleContent>
 </Layout>

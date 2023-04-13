@@ -7,12 +7,13 @@ import SectioningExample from "@/examples/sectioning/index.astro";
 import QuotesAndEmphasisExample from "@/examples/quotes-and-emphasis/index.astro";
 import FormControlsExample from "@/examples/form-controls/index.astro";
 import UtilityClassesExample from "@/examples/utility-classes/index.astro";
+import { siteUrl } from "@/util";
 ---
 
 <h1 id="top">CSS To Go - examples</h1>
 
 <div>
-    <slot />&nbsp;Or go back to the <a href="/">overview</a>.
+    <slot />&nbsp;Or go back to the <a href={siteUrl("/")}>overview</a>.
 </div>
 
 <p>
