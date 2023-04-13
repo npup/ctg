@@ -83,7 +83,9 @@
         & > input[type="checkbox"],
         & > input[type="radio"],
         & > select {
-            @include form-control-focus;
+            &:focus-visible {
+                outline-color: var(--outlinecolor-form-control--focus);
+            }
         }
     }
     /*   input[type="submit"],
