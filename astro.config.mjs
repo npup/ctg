@@ -9,7 +9,7 @@ export default defineConfig({
     server: {
         port: 3000,
     },
-    site: "https://npup .github.io",
+    site: "https://npup.github.io",
     base: "/ctg",
     // your configuration options here...
     // https://docs.astro.build/en/reference/configuration-reference/
