@@ -1,6 +1,5 @@
 # CSS-to-go
 
-
 A bit of CSS that makes a plain HTML document somewhat more pleasant to look at.
 
 It makes a _gentle_ reset, and then applies some global styles for common elements.  There are also a small number of utility classes made available.
@@ -11,8 +10,8 @@ Learn more by looking at the [description overview](https://npup.github.io/css-t
 
     npm i css-to-go
 
-
 ## Usage
+
 ### Via cdn
 
 An easy way to use it, here getting the latest and greatest version:
@@ -31,7 +30,6 @@ Import it for your bundler to handle
 `App.(jsx|svelte|whatever)`:
 
     import "css-to-go";
-
 
 or just link to it inside node_modules.
 
@@ -55,6 +53,7 @@ Then apply the "root selector" class `ctg-root` to trigger the styles (and possi
     ">
         <!-- your HTML here -->
     </body>
+
 ## View examples
 
     npm start
