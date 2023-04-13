@@ -9,7 +9,10 @@
         "type": "git",
         "url": "https://github.com/npup/css-to-go"
     },
-    "config": {},
+    "config": {
+        "outDirProd": "docs",
+        "outDirLocal": "docs-local"
+    },
     "keywords": [
         "css",
         "to go",

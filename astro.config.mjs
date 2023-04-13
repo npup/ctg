@@ -1,29 +1,28 @@
 import { defineConfig } from "astro/config";
 
-import x from "./package.json";
-console.log("xxx", x);
+import { config as npmConf } from "./package.json";
+console.log("npm conf:", npmConf);
 
 const env = "local" === process.env.NODE_ENV ? "local" : "prod";
 
 const conf = {
     local: {
-        outDir: "docs-local",
+        outDir: npmConf.outDirLocal,
         site: "http://localhost",
         base: "/",
     },
     prod: {
-        outDir: "docs",
-        //site: "https://npup.github.ix/ctx",
-        //base: "/ctg",
-        //base: "/wat",
+        outDir: npmConf.outDirProd,
     },
 };
 
-console.log("using conf", { ...conf[env] });
-
-export default defineConfig({
+const astroConf = defineConfig({
     server: {
         port: 3000,
     },
     ...conf[env],
 });
+
+console.log("Conf:", { env, npmConf, astroConf });
+
+export default astroConf;
