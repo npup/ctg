@@ -1,7 +1,5 @@
 import { defineConfig } from "astro/config";
-
 import { config as npmConf } from "./package.json";
-console.log("npm conf:", npmConf);
 
 const env = "local" === process.env.NODE_ENV ? "local" : "prod";
 
