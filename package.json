@@ -37,7 +37,7 @@
         "prettier": "^2.8.7"
     },
     "config": {
-        "basePath": "/css-to-go"
+        "basePath": "/ctg"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
