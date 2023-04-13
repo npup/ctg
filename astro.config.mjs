@@ -15,7 +15,7 @@ const conf = {
         outDir: "docs",
         site: "https://npup.github.ix/ctx",
         //base: "/ctg",
-        base: "/",
+        base: "/wat",
     },
 };
 
