@@ -1,13 +1,13 @@
 {
-    "name": "css-to-go2",
+    "name": "ctg",
     "type": "module",
     "version": "1.0.0",
     "description": "A bit of global CSS to help shape up the looks of a plain HTML document.  Has a dark mode and a light mode.",
     "author": "P.Envall <petter.envall@gmail.com>",
-    "homepage": "https://npup.github.io/css-to-go",
+    "homepage": "https://npup.github.io/ctg",
     "repository": {
         "type": "git",
-        "url": "https://github.com/npup/css-to-go"
+        "url": "https://github.com/npup/ctg"
     },
     "config": {
         "outDirProd": "docs",
@@ -26,7 +26,7 @@
     ],
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/npup/css-to-go/issues"
+        "url": "https://github.com/npup/ctg/issues"
     },
     "dependencies": {
         "@commitlint/cli": "^17.5.1",
