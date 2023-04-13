@@ -9,6 +9,7 @@
         "type": "git",
         "url": "https://github.com/npup/css-to-go"
     },
+    "config": {},
     "keywords": [
         "css",
         "to go",
@@ -39,8 +40,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "astro build",
-        "build:local": "NODE_ENV=local astro build",
-        "clean": "rm -rf dist docs && mkdir dist",
+        "build:local": "NODE_ENV=local npm run build",
+        "clean": "rm -rf dist docs docs-local && mkdir dist",
         "prebuild": "npm run clean",
         "start": "astro dev",
         "postbuild": "npm run copy:dist && npm run touch-nojekyll && echo '----- Done'",
