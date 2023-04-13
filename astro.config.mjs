@@ -1,17 +1,28 @@
 import { defineConfig } from "astro/config";
 
-const isLocal = "local" === process.env.NODE_ENV;
+import x from "./package.json";
+console.log("xxx", x);
 
-const outDir = isLocal ? "docs-local" : "docs";
+const env = "local" === process.env.NODE_ENV ? "local" : "prod";
+
+const conf = {
+    local: {
+        outDir: "docs-local",
+        site: "http://localhost",
+        base: "/",
+    },
+    prod: {
+        outDir: "docs",
+        site: "https://npup.github.io",
+        base: "/ctg",
+    },
+};
+
+console.log("using conf", { ...conf[env] });
 
 export default defineConfig({
-    outDir,
     server: {
         port: 3000,
     },
-    site: "https://npup.github.io",
-    base: "/ctg",
-
-    // your configuration options here...
-    // https://docs.astro.build/en/reference/configuration-reference/
+    ...conf[env],
 });

@@ -36,9 +36,6 @@
         "postcss-nesting": "^11.2.2",
         "prettier": "^2.8.7"
     },
-    "config": {
-        "basePath": "/ctg"
-    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "astro build",
@@ -46,9 +43,8 @@
         "clean": "rm -rf dist docs && mkdir dist",
         "prebuild": "npm run clean",
         "start": "astro dev",
-        "postbuild": "npm run copy:dist && npm run process:docs && npm run touch-nojekyll && echo '----- Done'",
+        "postbuild": "npm run copy:dist && npm run touch-nojekyll && echo '----- Done'",
         "copy:dist": "cat docs/_astro/*.css > dist/css-to-go.min.css && npx prettier dist/css-to-go.min.css > dist/css-to-go.css",
-        "process:docs": "echo NOT DOING THIS node scripts/updateBasePath.js $npm_package_config_basePath",
         "touch-nojekyll": "touch docs/.nojekyll",
         "lint-fix": "echo 'not linting/fixing yet'"
     }
