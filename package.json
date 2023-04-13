@@ -1,7 +1,7 @@
 {
     "name": "@npup/ctg",
     "type": "module",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "A bit of global CSS to help shape up the looks of a plain HTML document.  Has a dark mode and a light mode.",
     "author": "P.Envall <petter.envall@gmail.com>",
     "homepage": "https://npup.github.io/ctg",
@@ -28,14 +28,8 @@
     "bugs": {
         "url": "https://github.com/npup/ctg/issues"
     },
-    "dependencies": {
-        "@commitlint/cli": "^17.5.1",
-        "@commitlint/config-conventional": "^17.4.4",
-        "@semantic-release/changelog": "^6.0.3",
-        "@semantic-release/git": "^10.0.1",
+    "devDependencies": {
         "astro": "^2.2.3",
-        "filehound": "^1.17.6",
-        "husky": "^8.0.3",
         "postcss": "^8.4.21",
         "postcss-nesting": "^11.2.2",
         "prettier": "^2.8.7"
